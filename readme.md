@@ -36,6 +36,11 @@ $ ipify --help
 ```
 
 
+## Related
+
+See [internal-ip](https://github.com/sindresorhus/internal-ip) to get your internal IP.
+
+
 ## License
 
 MIT © [Sindre Sorhus](http://sindresorhus.com)

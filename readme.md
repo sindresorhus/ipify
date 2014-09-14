@@ -1,6 +1,6 @@
 # ipify [![Build Status](https://travis-ci.org/sindresorhus/ipify.svg?branch=master)](https://travis-ci.org/sindresorhus/ipify)
 
-> Get your public IP address - fast
+> Get your public IP address
 
 Using the [ipify](http://www.ipify.org) API.
 
@@ -38,7 +38,7 @@ $ ipify --help
 
 ## Related
 
-See [internal-ip](https://github.com/sindresorhus/internal-ip) to get your internal IP.
+See [internal-ip](https://github.com/sindresorhus/internal-ip) to get your internal IP address.
 
 
 ## License

@@ -7,7 +7,7 @@ Using the [ipify](http://www.ipify.org) API.
 
 ## Usage
 
-```sh
+```
 $ npm install --save ipify
 ```
 
@@ -23,11 +23,11 @@ ipify(function (err, ip) {
 
 ## CLI
 
-```sh
+```
 $ npm install --global ipify
 ```
 
-```sh
+```
 $ ipify --help
 
   Example

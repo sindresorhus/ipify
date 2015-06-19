@@ -8,7 +8,7 @@ meow({
 		'Example',
 		'  $ ipify',
 		'  82.142.31.236'
-	].join('\n')
+	]
 });
 
 ipify(function (err, ip) {

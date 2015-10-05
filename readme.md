@@ -12,11 +12,11 @@ $ npm install --save ipify
 ```
 
 ```js
-var ipify = require('ipify');
+const ipify = require('ipify');
 
-ipify(function (err, ip) {
+ipify((err, ip) => {
 	console.log(ip);
-	//=> 82.142.31.236
+	//=> '82.142.31.236'
 });
 ```
 
@@ -31,7 +31,7 @@ $ npm install --global ipify
 $ ipify --help
 
   Example
-    ipify
+    $ ipify
     82.142.31.236
 ```
 

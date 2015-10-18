@@ -1,12 +1,12 @@
 'use strict';
 var test = require('ava');
+var isIp = require('is-ip');
 var publicIp = require('./');
 
 test(function (t) {
 	publicIp(function (err, ip) {
-		t.assert(!err, err);
-		t.assert(ip.length >= 13);
-		t.assert(ip.length <= 50);
+		t.ifError(err);
+		t.true(isIp(ip));
 		t.end();
 	});
 });

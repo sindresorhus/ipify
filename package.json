@@ -32,10 +32,10 @@
     "external"
   ],
   "dependencies": {
-    "got": "^3.2.0",
+    "got": "^5.0.0",
     "meow": "^3.3.0"
   },
   "devDependencies": {
-    "ava": "0.0.4"
+    "ava": "^0.2.0"
   }
 }

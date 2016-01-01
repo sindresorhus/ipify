@@ -1,10 +1,9 @@
-'use strict';
-var test = require('ava');
-var isIp = require('is-ip');
-var publicIp = require('./');
+import test from 'ava';
+import isIp from 'is-ip';
+import m from './';
 
-test(function (t) {
-	publicIp(function (err, ip) {
+test.cb(t => {
+	m((err, ip) => {
 		t.ifError(err);
 		t.true(isIp(ip));
 		t.end();

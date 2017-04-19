@@ -1,7 +1,7 @@
 {
   "name": "ipify",
   "version": "1.1.0",
-  "description": "Get your public IP address - fast",
+  "description": "Get your public IP address",
   "license": "MIT",
   "repository": "sindresorhus/ipify",
   "author": {
@@ -9,34 +9,31 @@
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com"
   },
-  "bin": "cli.js",
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4"
   },
   "scripts": {
-    "test": "ava"
+    "test": "xo && ava"
   },
   "files": [
-    "index.js",
-    "cli.js"
+    "index.js"
   ],
   "keywords": [
-    "cli-app",
-    "cli",
-    "bin",
     "ip",
     "ipv4",
     "ipv6",
     "address",
     "public",
-    "external"
+    "external",
+    "own"
   ],
   "dependencies": {
-    "got": "^5.0.0",
+    "got": "^6.7.1",
     "meow": "^3.3.0"
   },
   "devDependencies": {
     "ava": "*",
-    "is-ip": "^1.0.0"
+    "is-ip": "^2.0.0",
+    "xo": "*"
   }
 }

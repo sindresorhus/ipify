@@ -2,45 +2,48 @@
 
 > Get your public IP address
 
-Using the [ipify](http://www.ipify.org) API.
+Using the [`ipify` API](https://www.ipify.org) or a [custom `ipify` instance](https://github.com/rdegges/ipify-api).
 
 
-## Usage
+## Install
 
 ```
 $ npm install --save ipify
 ```
 
+
+## Usage
+
 ```js
 const ipify = require('ipify');
 
-ipify((err, ip) => {
+ipify().then(ip => {
 	console.log(ip);
 	//=> '82.142.31.236'
 });
 ```
 
 
-## CLI
+## API
 
-```
-$ npm install --global ipify
-```
+### ipify([endpoint])
 
-```
-$ ipify --help
+Returns a `Promise` for the IP address.
 
-  Example
-    $ ipify
-    82.142.31.236
-```
+#### endpoint
+
+Type: `string`<br>
+Default: `https://api.ipify.org`
+
+Custom API endpoint.
 
 
 ## Related
 
-See [internal-ip](https://github.com/sindresorhus/internal-ip) to get your internal IP address.
+- [ipify-cli](https://github.com/sindresorhus/ipify-cli) - CLI for this module
+- [internal-ip](https://github.com/sindresorhus/internal-ip) - Get your internal IPv4 or IPv6 address
 
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

@@ -1,4 +1,4 @@
 'use strict';
-var got = require('got');
+const got = require('got');
 
-module.exports = got.bind(null, 'https://api.ipify.org');
+module.exports = endpoint => got(endpoint || 'https://api.ipify.org').then(res => res.body);

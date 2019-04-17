@@ -1,4 +1,7 @@
 'use strict';
 const got = require('got');
 
-module.exports = endpoint => got(endpoint || 'https://api.ipify.org').then(res => res.body);
+module.exports = async endpoint => {
+	const response = await got(endpoint || 'https://api.ipify.org');
+	return response.body;
+};

@@ -1,39 +1,40 @@
 {
-  "name": "ipify",
-  "version": "2.0.0",
-  "description": "Get your public IP address",
-  "license": "MIT",
-  "repository": "sindresorhus/ipify",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
-  },
-  "engines": {
-    "node": ">=4"
-  },
-  "scripts": {
-    "test": "xo && ava"
-  },
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "ip",
-    "ipv4",
-    "ipv6",
-    "address",
-    "public",
-    "external",
-    "own"
-  ],
-  "dependencies": {
-    "got": "^6.7.1",
-    "meow": "^3.3.0"
-  },
-  "devDependencies": {
-    "ava": "*",
-    "is-ip": "^2.0.0",
-    "xo": "*"
-  }
+	"name": "ipify",
+	"version": "2.0.0",
+	"description": "Get your public IP address",
+	"license": "MIT",
+	"repository": "sindresorhus/ipify",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "sindresorhus.com"
+	},
+	"engines": {
+		"node": ">=8"
+	},
+	"scripts": {
+		"test": "xo && ava && tsd"
+	},
+	"files": [
+		"index.js",
+		"index.d.ts"
+	],
+	"keywords": [
+		"ip",
+		"ipv4",
+		"ipv6",
+		"address",
+		"public",
+		"external",
+		"own"
+	],
+	"dependencies": {
+		"got": "^9.6.0"
+	},
+	"devDependencies": {
+		"ava": "^1.4.1",
+		"is-ip": "^3.0.0",
+		"tsd": "^0.7.2",
+		"xo": "^0.24.0"
+	}
 }

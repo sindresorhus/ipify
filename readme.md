@@ -8,7 +8,7 @@ Using the [`ipify` API](https://www.ipify.org) or a [custom `ipify` instance](ht
 ## Install
 
 ```
-$ npm install --save ipify
+$ npm install ipify
 ```
 
 
@@ -17,23 +17,27 @@ $ npm install --save ipify
 ```js
 const ipify = require('ipify');
 
-ipify().then(ip => {
-	console.log(ip);
+(async => {
+	console.log(await ipify());
 	//=> '82.142.31.236'
-});
+})();
 ```
 
 
 ## API
 
-### ipify([endpoint])
+### ipify([options])
 
 Returns a `Promise` for the IP address.
 
-#### endpoint
+#### options
+
+Type: `object`
+
+##### endpoint
 
 Type: `string`<br>
-Default: `https://api.ipify.org`
+Default: `'https://api.ipify.org'`
 
 Custom API endpoint.
 

@@ -1,8 +1,8 @@
 import test from 'ava';
 import isIp from 'is-ip';
-import m from '.';
+import ipify from '.';
 
-test(async t => {
-	t.true(isIp(await m()));
-	t.true(isIp(await m('https://api.ipify.org')));
+test('main', async t => {
+	t.true(isIp(await ipify()));
+	t.true(isIp(await ipify({endpoint: 'https://api.ipify.org'})));
 });

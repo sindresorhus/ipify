@@ -28,7 +28,7 @@ const ipify = require('ipify');
 
 ### ipify([options])
 
-Returns a `Promise` for the IP address.
+Returns a `Promise<string>` with an IP address.
 
 #### options
 

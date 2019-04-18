@@ -12,7 +12,7 @@ declare namespace ipify {
 /**
 Get your public IP address.
 
-@returns The IP address.
+@returns An IP address.
 
 @example
 ```

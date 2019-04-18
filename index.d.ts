@@ -1,7 +1,17 @@
+declare namespace ipify {
+	interface Options {
+		/**
+		Custom API endpoint.
+
+		@default 'https://api.ipify.org'
+		*/
+		readonly endpoint?: string;
+	}
+}
+
 /**
 Get your public IP address.
 
-@param endpoint - Custom API endpoint. Default: `'https://api.ipify.org'`.
 @returns The IP address.
 
 @example
@@ -14,6 +24,6 @@ import ipify = require('ipify');
 })();
 ```
 */
-declare function ipify(endpoint?: string): Promise<string>;
+declare function ipify(options?: ipify.Options): Promise<string>;
 
 export = ipify;

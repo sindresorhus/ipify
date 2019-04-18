@@ -26,11 +26,15 @@ const ipify = require('ipify');
 
 ## API
 
-### ipify([endpoint])
+### ipify([options])
 
 Returns a `Promise` for the IP address.
 
-#### endpoint
+#### options
+
+Type: `object`
+
+##### endpoint
 
 Type: `string`<br>
 Default: `'https://api.ipify.org'`

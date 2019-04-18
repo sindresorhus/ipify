@@ -1,6 +1,6 @@
 {
 	"name": "ipify",
-	"version": "2.0.0",
+	"version": "3.0.0",
 	"description": "Get your public IP address",
 	"license": "MIT",
 	"repository": "sindresorhus/ipify",

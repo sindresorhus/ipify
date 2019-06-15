@@ -4,5 +4,12 @@ import ipify from '.';
 
 test('main', async t => {
 	t.true(isIp(await ipify()));
-	t.true(isIp(await ipify({endpoint: 'https://api.ipify.org'})));
+});
+
+test('useIPv6:false', async t => {
+	t.true(isIp.v4(await ipify({useIPv6: false})));
+});
+
+test('endpoint:custom', async t => {
+	t.true(isIp.v4(await ipify({endpoint: 'https://api.ipify.org'})));
 });

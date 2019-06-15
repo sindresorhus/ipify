@@ -17,8 +17,11 @@ $ npm install ipify
 ```js
 const ipify = require('ipify');
 
-(async => {
+(async () => {
 	console.log(await ipify());
+	//=> '2001:0db8:85a3:0000:0000:8a2e:0370:7334'
+
+	console.log(await ipify({useIPv6: false});
 	//=> '82.142.31.236'
 })();
 ```
@@ -34,10 +37,19 @@ Returns a `Promise<string>` with an IP address.
 
 Type: `object`
 
+##### useIPv6
+
+Type: `boolean`<br>
+Default: `true`
+
+Use the IPv6 API endpoint. The IPv6 endpoint will return an IPv6 address if available, IPv4 address otherwise.
+
+Setting the `endpoint` option will override this.
+
 ##### endpoint
 
 Type: `string`<br>
-Default: `'https://api.ipify.org'`
+Default: `'https://api6.ipify.org'`
 
 Custom API endpoint.
 

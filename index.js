@@ -1,12 +1,14 @@
 'use strict';
 const got = require('got');
 
-module.exports = async options => {
-	options = {
-		endpoint: 'https://api.ipify.org',
-		...options
-	};
+const IPIFY_ENDPOINT_IPV4 = 'https://api.ipify.org';
+const IPIFY_ENDPOINT_IPV6 = 'https://api6.ipify.org';
 
-	const {body} = await got(options.endpoint);
+module.exports = async ({useIPv6 = true, endpoint} = {}) => {
+	if (endpoint === undefined) {
+		endpoint = useIPv6 ? IPIFY_ENDPOINT_IPV6 : IPIFY_ENDPOINT_IPV4;
+	}
+
+	const {body} = await got(endpoint);
 	return body;
 };

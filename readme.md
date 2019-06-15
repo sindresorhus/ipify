@@ -41,7 +41,7 @@ Type: `object`
 Type: `boolean`<br>
 Default: `true`
 
-Use IPv6 api endpoint. IPv6 endpoint will return IPv6 address if available, IPv4 address otherwise. Setting the `endpoint` option will override this.
+Use IPv6 API endpoint. IPv6 endpoint will return IPv6 address if available, IPv4 address otherwise. Setting the `endpoint` option will override this.
 
 ##### endpoint
 

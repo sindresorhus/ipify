@@ -29,7 +29,7 @@ const ipify = require('ipify');
 
 ## API
 
-### ipify([options])
+### ipify(options?)
 
 Returns a `Promise<string>` with an IP address.
 
@@ -58,8 +58,3 @@ Custom API endpoint.
 
 - [ipify-cli](https://github.com/sindresorhus/ipify-cli) - CLI for this module
 - [internal-ip](https://github.com/sindresorhus/internal-ip) - Get your internal IPv4 or IPv6 address
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)

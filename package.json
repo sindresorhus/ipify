@@ -21,8 +21,8 @@
 	],
 	"keywords": [
 		"ip",
-		"ipv4",
 		"ipv6",
+		"ipv4",
 		"address",
 		"public",
 		"external",
@@ -32,9 +32,9 @@
 		"got": "^9.6.0"
 	},
 	"devDependencies": {
-		"ava": "^1.4.1",
+		"ava": "^2.1.0",
 		"is-ip": "^3.0.0",
-		"tsd": "^0.7.2",
+		"tsd": "^0.7.3",
 		"xo": "^0.24.0"
 	}
 }

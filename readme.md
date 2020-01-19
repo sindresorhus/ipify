@@ -2,15 +2,13 @@
 
 > Get your public IP address
 
-Using the [`ipify` API](https://www.ipify.org) or a [custom `ipify` instance](https://github.com/rdegges/ipify-api).
-
+Using the [Ipify API](https://www.ipify.org) or a [custom Ipify instance](https://github.com/rdegges/ipify-api).
 
 ## Install
 
 ```
 $ npm install ipify
 ```
-
 
 ## Usage
 
@@ -26,7 +24,6 @@ const ipify = require('ipify');
 })();
 ```
 
-
 ## API
 
 ### ipify(options?)
@@ -39,7 +36,7 @@ Type: `object`
 
 ##### useIPv6
 
-Type: `boolean`<br>
+Type: `boolean`\
 Default: `true`
 
 Use the IPv6 API endpoint. The IPv6 endpoint will return an IPv6 address if available, IPv4 address otherwise.
@@ -48,11 +45,16 @@ Setting the `endpoint` option will override this.
 
 ##### endpoint
 
-Type: `string`<br>
+Type: `string`\
 Default: `'https://api6.ipify.org'`
 
 Custom API endpoint.
 
+## FAQ
+
+### How is this different from [`public-ip`](https://github.com/sindresorhus/public-ip)?
+
+This package only targets the Ipify service, while `public-ip` targets multiple services, is faster, and more ressilient. Unless you run your own Ipify instance, you probably want `public-ip` instead.
 
 ## Related
 

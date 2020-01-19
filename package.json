@@ -4,6 +4,7 @@
 	"description": "Get your public IP address",
 	"license": "MIT",
 	"repository": "sindresorhus/ipify",
+	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",

@@ -54,7 +54,7 @@ Custom API endpoint.
 
 ### How is this different from [`public-ip`](https://github.com/sindresorhus/public-ip)?
 
-This package only targets the Ipify service, while `public-ip` targets multiple services, is faster, and more ressilient. Unless you run your own Ipify instance, you probably want `public-ip` instead.
+This package only targets the Ipify service, while `public-ip` targets multiple services, is faster, and more resilient. Unless you run your own Ipify instance, you probably want `public-ip` instead.
 
 ## Related
 

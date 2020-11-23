@@ -1,4 +1,4 @@
-# ipify [![Build Status](https://travis-ci.org/sindresorhus/ipify.svg?branch=master)](https://travis-ci.org/sindresorhus/ipify)
+# ipify
 
 > Get your public IP address
 

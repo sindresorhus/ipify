@@ -8,10 +8,10 @@
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
-		"url": "sindresorhus.com"
+		"url": "https://sindresorhus.com"
 	},
 	"engines": {
-		"node": ">=8"
+		"node": ">=10"
 	},
 	"scripts": {
 		"test": "xo && ava && tsd"
@@ -30,12 +30,12 @@
 		"own"
 	],
 	"dependencies": {
-		"got": "^9.6.0"
+		"got": "^11.8.0"
 	},
 	"devDependencies": {
-		"ava": "^2.1.0",
-		"is-ip": "^3.0.0",
-		"tsd": "^0.7.3",
-		"xo": "^0.24.0"
+		"ava": "^2.4.0",
+		"is-ip": "^3.1.0",
+		"tsd": "^0.13.1",
+		"xo": "^0.35.0"
 	}
 }

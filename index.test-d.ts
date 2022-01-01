@@ -1,8 +1,7 @@
 import {expectType} from 'tsd';
-import ipify = require('.');
+import ipify from './index.js';
 
-const options: ipify.Options = {};
 expectType<Promise<string>>(ipify());
-expectType<Promise<string>>(ipify({useIPv6: true}));
-expectType<Promise<string>>(ipify({useIPv6: false}));
+expectType<Promise<string>>(ipify({useIPv6: true})); // eslint-disable-line @typescript-eslint/naming-convention
+expectType<Promise<string>>(ipify({useIPv6: false})); // eslint-disable-line @typescript-eslint/naming-convention
 expectType<Promise<string>>(ipify({endpoint: 'https://example.com'}));

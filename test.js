@@ -1,6 +1,7 @@
+import process from 'node:process';
 import test from 'ava';
 import isIp from 'is-ip';
-import ipify from '.';
+import ipify from './index.js';
 
 // GitHub Actions doesn't support IPv6: https://github.com/actions/virtual-environments/issues/668
 if (!process.env.CI) {

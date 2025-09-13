@@ -1,61 +1,62 @@
+import {test} from 'node:test';
+import assert from 'node:assert';
 import process from 'node:process';
-import test from 'ava';
-import isIp from 'is-ip';
+import {isIP, isIPv4} from 'is-ip';
 import ipify from './index.js';
 
 // GitHub Actions doesn't support IPv6: https://github.com/actions/virtual-environments/issues/668
 if (!process.env.CI) {
-	test('main', async t => {
-		t.true(isIp(await ipify()));
+	test('main', async () => {
+		assert.ok(isIP(await ipify()));
 	});
 }
 
-test('useIPv6:false', async t => {
-	t.true(isIp.v4(await ipify({useIPv6: false})));
+test('useIPv6:false', async () => {
+	assert.ok(isIPv4(await ipify({useIPv6: false})));
 });
 
-test('endpoint:custom', async t => {
-	t.true(isIp.v4(await ipify({endpoint: 'https://api.ipify.org'})));
+test('endpoint:custom', async () => {
+	assert.ok(isIPv4(await ipify({endpoint: 'https://api.ipify.org'})));
 });
 
-test('endpoint:array', async t => {
+test('endpoint:array', async () => {
 	const result = await ipify({
 		endpoint: [
 			'https://api.ipify.org',
 			'https://api6.ipify.org',
 		],
 	});
-	t.true(isIp(result));
+	assert.ok(isIP(result));
 });
 
-test('endpoint:empty array throws', async t => {
-	await t.throwsAsync(
+test('endpoint:empty array throws', async () => {
+	await assert.rejects(
 		ipify({endpoint: []}),
-		{instanceOf: TypeError, message: 'Endpoint array cannot be empty'},
+		{name: 'TypeError', message: 'Endpoint array cannot be empty'},
 	);
 });
 
-test('endpoint:single-item array', async t => {
+test('endpoint:single-item array', async () => {
 	const result = await ipify({
 		endpoint: ['https://api.ipify.org'],
 	});
-	t.true(isIp.v4(result));
+	assert.ok(isIPv4(result));
 });
 
-test('endpoint overrides useIPv6', async t => {
+test('endpoint overrides useIPv6', async () => {
 	const result = await ipify({
 		useIPv6: true,
 		endpoint: 'https://api.ipify.org',
 	});
-	t.true(isIp.v4(result));
+	assert.ok(isIPv4(result));
 });
 
-test('endpoint:array with duplicates', async t => {
+test('endpoint:array with duplicates', async () => {
 	const result = await ipify({
 		endpoint: [
 			'https://api.ipify.org',
 			'https://api.ipify.org',
 		],
 	});
-	t.true(isIp.v4(result));
+	assert.ok(isIPv4(result));
 });

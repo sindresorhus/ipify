@@ -1,4 +1,4 @@
-export interface Options {
+export type Options = {
 	/**
 	Use the IPv6 API endpoint. The IPv6 endpoint will return an IPv6 address if available, IPv4 address otherwise.
 
@@ -42,7 +42,7 @@ export interface Options {
 	```
 	*/
 	readonly endpoint?: string | readonly string[];
-}
+};
 
 /**
 Get your public IP address.

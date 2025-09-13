@@ -1,5 +1,3 @@
-import got from 'got';
-
 const IPIFY_ENDPOINT_IPV4 = 'https://api.ipify.org';
 const IPIFY_ENDPOINT_IPV6 = 'https://api6.ipify.org';
 
@@ -11,15 +9,12 @@ export default async function ipify({useIPv6 = true, endpoint} = {}) {
 			throw new TypeError('Endpoint array cannot be empty');
 		}
 
-		// eslint-disable-next-line no-use-extend-native/no-use-extend-native
-		return Promise.any(
-			endpoint.map(async url => {
-				const {body} = await got(url);
-				return body;
-			}),
-		);
+		return Promise.any(endpoint.map(async url => {
+			const response = await fetch(url);
+			return response.text();
+		}));
 	}
 
-	const {body} = await got(endpoint);
-	return body;
+	const response = await fetch(endpoint);
+	return response.text();
 }

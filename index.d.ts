@@ -19,9 +19,29 @@ export interface Options {
 	/**
 	Custom API endpoint.
 
+	Can be a single endpoint or an array of endpoints. When multiple endpoints are provided, they will be tried concurrently and the first successful response will be returned.
+
 	@default 'https://api6.ipify.org'
+
+	@example
+	```
+	import ipify from 'ipify';
+
+	// Single endpoint
+	console.log(await ipify({endpoint: 'https://api.ipify.org'}));
+	//=> '82.142.31.236'
+
+	// Multiple endpoints for resilience
+	console.log(await ipify({
+		endpoint: [
+			'https://api.ipify.org',
+			'https://ipify.example.org'
+		]
+	}));
+	//=> '82.142.31.236'
+	```
 	*/
-	readonly endpoint?: string;
+	readonly endpoint?: string | readonly string[];
 }
 
 /**

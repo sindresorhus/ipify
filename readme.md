@@ -47,10 +47,29 @@ console.log(await ipify({useIPv6: false}));
 
 ##### endpoint
 
-Type: `string`\
+Type: `string | string[]`\
 Default: `'https://api6.ipify.org'`
 
 Custom API endpoint.
+
+Can be a single endpoint or an array of endpoints. When multiple endpoints are provided, they will be tried concurrently and the first successful response will be returned.
+
+```js
+import ipify from 'ipify';
+
+// Single endpoint
+console.log(await ipify({endpoint: 'https://api.ipify.org'}));
+//=> '82.142.31.236'
+
+// Multiple endpoints for resilience
+console.log(await ipify({
+	endpoint: [
+		'https://api.ipify.org',
+		'https://ipify.example.org'
+	]
+}));
+//=> '82.142.31.236'
+```
 
 ## FAQ
 
@@ -60,5 +79,5 @@ This package only targets the Ipify service, while `public-ip` targets multiple 
 
 ## Related
 
-- [ipify-cli](https://github.com/sindresorhus/ipify-cli) - CLI for this module
+- [ipify-cli](https://github.com/sindresorhus/ipify-cli) - CLI for this package
 - [internal-ip](https://github.com/sindresorhus/internal-ip) - Get your internal IPv4 or IPv6 address
